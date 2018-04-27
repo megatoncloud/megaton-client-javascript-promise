@@ -134,6 +134,7 @@ Class | Method | HTTP request | Description
 *MegatonApi.HTTPScriptApi* | [**getHttpScriptEntryHeaders**](docs/HTTPScriptApi.md#getHttpScriptEntryHeaders) | **GET** /v1/tenants/me/use-cases/{useCaseId}/http-script/{entryId}/headers | Get HTTP script entry headers
 *MegatonApi.LoadDistributionApi* | [**getLoadDistribution**](docs/LoadDistributionApi.md#getLoadDistribution) | **GET** /v1/tenants/me/test-plans/{testPlanId}/load-distribution | Get load distribution
 *MegatonApi.LoadDistributionApi* | [**setLoadDistribution**](docs/LoadDistributionApi.md#setLoadDistribution) | **PUT** /v1/tenants/me/test-plans/{testPlanId}/load-distribution | Set load distribution
+*MegatonApi.OAuthTokensApi* | [**createOAuthToken**](docs/OAuthTokensApi.md#createOAuthToken) | **POST** /v1/oauth2/tokens | Create new token
 *MegatonApi.TenantsApi* | [**createTenant**](docs/TenantsApi.md#createTenant) | **POST** /v1/tenants | Create new tenant
 *MegatonApi.TenantsApi* | [**deleteAuthenticatedTenant**](docs/TenantsApi.md#deleteAuthenticatedTenant) | **DELETE** /v1/tenants/me | Delete authenticated tenant
 *MegatonApi.TenantsApi* | [**getAuthenticatedTenant**](docs/TenantsApi.md#getAuthenticatedTenant) | **GET** /v1/tenants/me | Get authenticated tenant
@@ -166,6 +167,7 @@ Class | Method | HTTP request | Description
  - [MegatonApi.LoadDistributionEntry](docs/LoadDistributionEntry.md)
  - [MegatonApi.LoadDistributionEntrySpec](docs/LoadDistributionEntrySpec.md)
  - [MegatonApi.NameValuePair](docs/NameValuePair.md)
+ - [MegatonApi.OAuthToken](docs/OAuthToken.md)
  - [MegatonApi.Tenant](docs/Tenant.md)
  - [MegatonApi.TenantSpec](docs/TenantSpec.md)
  - [MegatonApi.TestExecution](docs/TestExecution.md)
@@ -185,6 +187,8 @@ Class | Method | HTTP request | Description
 - **Flow**: password
 - **Authorization URL**: 
 - **Scopes**: 
+  - tenant:baseline: Allows execution of baselines
+  - tenant:test: Allows execution of tests
   - tenant:write: Allows writing of tenant data
   - tenant:read: Allows reading of tenant data
 

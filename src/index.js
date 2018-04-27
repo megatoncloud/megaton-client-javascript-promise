@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BaselineExecution', 'model/BaselineExecutionSpec', 'model/HAR', 'model/HARLog', 'model/HARLogEntry', 'model/HARPostData', 'model/HARRequest', 'model/HTTPMessageHeader', 'model/HTTPResponse', 'model/HTTPScriptEntry', 'model/LoadDistributionEntry', 'model/LoadDistributionEntrySpec', 'model/NameValuePair', 'model/Tenant', 'model/TenantSpec', 'model/TestExecution', 'model/TestPlan', 'model/TestPlanPatchOperation', 'model/TestPlanSpec', 'model/UseCase', 'model/UseCaseSpec', 'api/BaselineExecutionsApi', 'api/BaselineHTTPResponsesApi', 'api/HARImportsApi', 'api/HTTPScriptApi', 'api/LoadDistributionApi', 'api/TenantsApi', 'api/TestExecutionsApi', 'api/TestHTTPResponsesApi', 'api/TestPlansApi', 'api/UseCasesApi'], factory);
+    define(['ApiClient', 'model/BaselineExecution', 'model/BaselineExecutionSpec', 'model/HAR', 'model/HARLog', 'model/HARLogEntry', 'model/HARPostData', 'model/HARRequest', 'model/HTTPMessageHeader', 'model/HTTPResponse', 'model/HTTPScriptEntry', 'model/LoadDistributionEntry', 'model/LoadDistributionEntrySpec', 'model/NameValuePair', 'model/OAuthToken', 'model/Tenant', 'model/TenantSpec', 'model/TestExecution', 'model/TestPlan', 'model/TestPlanPatchOperation', 'model/TestPlanSpec', 'model/UseCase', 'model/UseCaseSpec', 'api/BaselineExecutionsApi', 'api/BaselineHTTPResponsesApi', 'api/HARImportsApi', 'api/HTTPScriptApi', 'api/LoadDistributionApi', 'api/OAuthTokensApi', 'api/TenantsApi', 'api/TestExecutionsApi', 'api/TestHTTPResponsesApi', 'api/TestPlansApi', 'api/UseCasesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BaselineExecution'), require('./model/BaselineExecutionSpec'), require('./model/HAR'), require('./model/HARLog'), require('./model/HARLogEntry'), require('./model/HARPostData'), require('./model/HARRequest'), require('./model/HTTPMessageHeader'), require('./model/HTTPResponse'), require('./model/HTTPScriptEntry'), require('./model/LoadDistributionEntry'), require('./model/LoadDistributionEntrySpec'), require('./model/NameValuePair'), require('./model/Tenant'), require('./model/TenantSpec'), require('./model/TestExecution'), require('./model/TestPlan'), require('./model/TestPlanPatchOperation'), require('./model/TestPlanSpec'), require('./model/UseCase'), require('./model/UseCaseSpec'), require('./api/BaselineExecutionsApi'), require('./api/BaselineHTTPResponsesApi'), require('./api/HARImportsApi'), require('./api/HTTPScriptApi'), require('./api/LoadDistributionApi'), require('./api/TenantsApi'), require('./api/TestExecutionsApi'), require('./api/TestHTTPResponsesApi'), require('./api/TestPlansApi'), require('./api/UseCasesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/BaselineExecution'), require('./model/BaselineExecutionSpec'), require('./model/HAR'), require('./model/HARLog'), require('./model/HARLogEntry'), require('./model/HARPostData'), require('./model/HARRequest'), require('./model/HTTPMessageHeader'), require('./model/HTTPResponse'), require('./model/HTTPScriptEntry'), require('./model/LoadDistributionEntry'), require('./model/LoadDistributionEntrySpec'), require('./model/NameValuePair'), require('./model/OAuthToken'), require('./model/Tenant'), require('./model/TenantSpec'), require('./model/TestExecution'), require('./model/TestPlan'), require('./model/TestPlanPatchOperation'), require('./model/TestPlanSpec'), require('./model/UseCase'), require('./model/UseCaseSpec'), require('./api/BaselineExecutionsApi'), require('./api/BaselineHTTPResponsesApi'), require('./api/HARImportsApi'), require('./api/HTTPScriptApi'), require('./api/LoadDistributionApi'), require('./api/OAuthTokensApi'), require('./api/TenantsApi'), require('./api/TestExecutionsApi'), require('./api/TestHTTPResponsesApi'), require('./api/TestPlansApi'), require('./api/UseCasesApi'));
   }
-}(function(ApiClient, BaselineExecution, BaselineExecutionSpec, HAR, HARLog, HARLogEntry, HARPostData, HARRequest, HTTPMessageHeader, HTTPResponse, HTTPScriptEntry, LoadDistributionEntry, LoadDistributionEntrySpec, NameValuePair, Tenant, TenantSpec, TestExecution, TestPlan, TestPlanPatchOperation, TestPlanSpec, UseCase, UseCaseSpec, BaselineExecutionsApi, BaselineHTTPResponsesApi, HARImportsApi, HTTPScriptApi, LoadDistributionApi, TenantsApi, TestExecutionsApi, TestHTTPResponsesApi, TestPlansApi, UseCasesApi) {
+}(function(ApiClient, BaselineExecution, BaselineExecutionSpec, HAR, HARLog, HARLogEntry, HARPostData, HARRequest, HTTPMessageHeader, HTTPResponse, HTTPScriptEntry, LoadDistributionEntry, LoadDistributionEntrySpec, NameValuePair, OAuthToken, Tenant, TenantSpec, TestExecution, TestPlan, TestPlanPatchOperation, TestPlanSpec, UseCase, UseCaseSpec, BaselineExecutionsApi, BaselineHTTPResponsesApi, HARImportsApi, HTTPScriptApi, LoadDistributionApi, OAuthTokensApi, TenantsApi, TestExecutionsApi, TestHTTPResponsesApi, TestPlansApi, UseCasesApi) {
   'use strict';
 
   /**
@@ -128,6 +128,11 @@
      */
     NameValuePair: NameValuePair,
     /**
+     * The OAuthToken model constructor.
+     * @property {module:model/OAuthToken}
+     */
+    OAuthToken: OAuthToken,
+    /**
      * The Tenant model constructor.
      * @property {module:model/Tenant}
      */
@@ -192,6 +197,11 @@
      * @property {module:api/LoadDistributionApi}
      */
     LoadDistributionApi: LoadDistributionApi,
+    /**
+     * The OAuthTokensApi service constructor.
+     * @property {module:api/OAuthTokensApi}
+     */
+    OAuthTokensApi: OAuthTokensApi,
     /**
      * The TenantsApi service constructor.
      * @property {module:api/TenantsApi}
